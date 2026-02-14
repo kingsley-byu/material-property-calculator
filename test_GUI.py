@@ -4,9 +4,9 @@ import pytest
 
 def test_calculate_stress():
     assert calculate_stress(12,8) == approx(1.5, abs=0.001)
-    assert calculate_stress(12,8) == approx(1.5, abs=0.001)
-    assert calculate_stress(12,8) == approx(1.5, abs=0.001)
-    assert calculate_stress(12,8) == approx(1.5, abs=0.001)
+    assert calculate_stress(50,16) == approx(3.125, abs=0.001)
+    assert calculate_stress(100, 14.4) == approx(6.944, abs=0.001)
+    assert calculate_stress(120, 17.3) == approx(6.936, abs=0.001)
 
 
 
