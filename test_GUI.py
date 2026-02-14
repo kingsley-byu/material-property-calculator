@@ -18,11 +18,11 @@ def test_cal_strain():
     assert cal_strain(82, 64) == approx(-0.220, abs=0.001)
 
 def test_calculate_thermal_expansion():
-    assert calculate_thermal_expansion(0.000023, 2,100) == approx(0.0046, abs=0.001)
-    assert calculate_thermal_expansion(0.0000165, 4, 50) == approx(0.0033, abs=0.001)
-    assert calculate_thermal_expansion(0.000011, 3, 25) == approx(0.000825, abs=0.001)
-    assert calculate_thermal_expansion(0.000016, 0.9, 60) == approx(0.000864, abs=0.001)
-    assert calculate_thermal_expansion(0.000019, 8, 75) == approx(0.0114, abs=0.001)
+    assert calculate_thermal_expansion(2, 0.000023,100) == approx(0.0046, abs=0.001)
+    assert calculate_thermal_expansion(4, 0.0000165, 50) == approx(0.0033, abs=0.001)
+    assert calculate_thermal_expansion(3, 0.000011, 25) == approx(0.000825, abs=0.001)
+    assert calculate_thermal_expansion(0.9, 0.000016, 60) == approx(0.000864, abs=0.001)
+    assert calculate_thermal_expansion(8, 0.000019, 75) == approx(0.0114, abs=0.001)
 
 
 

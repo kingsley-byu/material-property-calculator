@@ -119,8 +119,8 @@ def get_gui(frm_main):
 
     lbl_inst_on_stress_calculation = Label(frm_main, text="2. Enter the value of 3 and 4 to calculate the strain", fg="blue", font=("Arial", 10))
     lbl_inst_on_stress_calculation.grid(row=2, column=2, columnspan=2)
-
-    lbl_inst_on_stress_calculation = Label(frm_main, text="3. Enter the value of  and 5,6 and 7 to calculate the", fg="blue", font=("Arial", 10))
+    
+    lbl_inst_on_stress_calculation = Label(frm_main, text="3. Enter the value of 5,6 and 7 to calculate the", fg="blue", font=("Arial", 10))
     lbl_inst_on_stress_calculation.grid(row=3, column=2, columnspan=2)
     lbl_inst_on_stress_calculation = Label(frm_main, text=" the linear thermal expansion of material", fg="blue", font=("Arial", 10))
     lbl_inst_on_stress_calculation.grid(row=4, column=2, columnspan=2)
