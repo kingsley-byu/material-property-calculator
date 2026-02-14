@@ -4,6 +4,11 @@ import pytest
 
 def test_calculate_stress():
     assert calculate_stress(12,8) == approx(1.5, abs=0.001)
+    assert calculate_stress(12,8) == approx(1.5, abs=0.001)
+    assert calculate_stress(12,8) == approx(1.5, abs=0.001)
+    assert calculate_stress(12,8) == approx(1.5, abs=0.001)
+
+
 
 
 def test_cal_strain():

@@ -154,20 +154,6 @@ def clear_field(ent_force, ent_area, ent_original, ent_final,ent_length, ent_alp
 
     ent_result.config(text="")
 
-    
-
-
-
-
-
-        
-    
-
-
-
-
-
-
 
 if __name__ == "__main__":
     main()
