@@ -33,7 +33,7 @@ def get_input_and_compute(ent_force, ent_area, ent_original, ent_final,ent_lengt
         area = float(ent_area.get())
         if area != 0:
             stress = calculate_stress(force, area)
-            text += f"Stress: {stress:.3f} N\n"
+            text += f"Stress: {stress:.3f} N/m\n"
     except ValueError:
         pass
 
@@ -122,8 +122,25 @@ def get_gui(frm_main):
     
     lbl_inst_on_stress_calculation = Label(frm_main, text="3. Enter the value of 5,6 and 7 to calculate the", fg="blue", font=("Arial", 10))
     lbl_inst_on_stress_calculation.grid(row=3, column=2, columnspan=2)
-    lbl_inst_on_stress_calculation = Label(frm_main, text=" the linear thermal expansion of material", fg="blue", font=("Arial", 10))
+    lbl_inst_on_stress_calculation = Label(frm_main, text="linear thermal expansion of material", fg="blue", font=("Arial", 10))
     lbl_inst_on_stress_calculation.grid(row=4, column=2, columnspan=2)
+
+    cal_description_heading = Label(frm_main, text="DESCRIPTION", font=("Arial", 10) )
+    cal_description_heading.grid(row=6, column=2)
+    description = Label(frm_main, text="This material property calculator, calculate three properties of material:")
+    description.grid(row=7, column=2)
+    description = Label(frm_main, text="(Stress, strain and linear thermal expansion) by using the values of both the ")
+    description.grid(row=8, column=2)
+    description = Label(frm_main, text="area in meters and force in newton to calculate the stress in Newton per meter (N/m)")
+    description.grid(row=9, column=2, padx=3, pady=3)
+    description = Label(frm_main, text="material strain due to elongation or reduction in length")
+    description.grid(row=10, column=2, padx=3, pady=3)
+    description = Label(frm_main, text="and finally the linear thermal expansion of metal using the length of the")
+    description.grid(row=11, column=2, padx=3, pady=3)
+    description = Label(frm_main, text="material, coefficient of linear expansion and change in temperature")
+    description.grid(row=12, column=2, padx=3, pady=3)
+
+
 
     # result label calculation
     lbl_result = Label(frm_main,text="", fg="blue", justify="left")
