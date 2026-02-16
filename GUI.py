@@ -2,6 +2,16 @@ import tkinter as tk
 from tkinter import Frame, Label, Button, Entry
 
 def main():
+    """
+    Create the main application window for the Material Property Calculator.
+
+    This function initializes the Tkinter window, sets the window title and
+    background color, creates the main frame container, and calls the GUI
+    setup function to place all widgets (labels, entries, and buttons).
+
+    Finally, it starts the Tkinter event loop so the window remains open
+    and responds to user interaction.
+    """
     window = tk.Tk()
     frm_main = Frame(window)
     frm_main.master.title("Material property calculator")
@@ -12,19 +22,66 @@ def main():
     frm_main.mainloop()
 
 def calculate_stress(force, area):
+    """
+    This function calculate stress  in  N/m²
+    parameters:
+      - force
+      - area
+    Return: stress
+    """
     stress = force/area
     return stress
 
 def cal_strain(original_length, final_length):
+    """
+    This function calculate strain based on material length increment
+    
+    parameters:
+      original_length: Description
+      final_length: Description
+      Return: strain
+    """
     length_change = final_length - original_length
     strain = length_change/original_length
     return strain
 
 def calculate_thermal_expansion(initial_length, coefficient, temperature_change):
+    """This function calculate linear thermal expansion of metal 
+    parameters:
+    initial_length
+    coefficient
+    temperature change
+    Return: change in length"""
     change_in_length = coefficient*initial_length*temperature_change
     return change_in_length
 
 def get_input_and_compute(ent_force, ent_area, ent_original, ent_final,ent_length, ent_alpha, ent_temp, lbl_result):
+    """
+    Retrieve user input from GUI entry fields, perform material property
+    calculations, and display the results.
+
+    This function attempts to calculate:
+    - Stress using force and area
+    - Strain using original and final length
+    - Thermal expansion using length, expansion coefficient, and temperature change
+
+    Each calculation runs only if valid numeric values are entered.
+    Results are combined into a formatted output string and displayed
+    in the result label. If no valid inputs are provided, an error
+    message is shown instead.
+
+    Parameters:
+        ent_force (Entry): Input field for force value
+        ent_area (Entry): Input field for cross-sectional area
+        ent_original (Entry): Input field for original length
+        ent_final (Entry): Input field for final length
+        ent_length (Entry): Input field for length used in thermal expansion
+        ent_alpha (Entry): Input field for thermal expansion coefficient
+        ent_temp (Entry): Input field for temperature change
+        lbl_result (Label): Label used to display calculation results
+    """
+
+
     # Create an empty text that will hold the results that is successfully calculated
     text = ""
     # Get stress
@@ -33,7 +90,8 @@ def get_input_and_compute(ent_force, ent_area, ent_original, ent_final,ent_lengt
         area = float(ent_area.get())
         if area != 0:
             stress = calculate_stress(force, area)
-            text += f"Stress: {stress:.3f} N/m\n"
+            text += f"Stress: {stress:.3f} N/m²\n"
+
     except ValueError:
         pass
 
@@ -71,6 +129,25 @@ def get_input_and_compute(ent_force, ent_area, ent_original, ent_final,ent_lengt
     
 
 def get_gui(frm_main):
+    """
+    Build and arrange all graphical user interface components for the
+    Material Property Calculator.
+
+    This function creates:
+    - Labels and entry fields for force, area, lengths, expansion coefficient,
+      and temperature change
+    - Instructional text explaining how to use the calculator
+    - A result display label for showing computed values
+    - Buttons to calculate results and clear all inputs
+
+    The layout is organized using the grid system and connects user input
+    fields to the calculation and clearing functions.
+
+    Parameters:
+        frm_main (Frame): The main frame where all GUI widgets are placed
+    """
+
+
     lbl_force = Label(frm_main, text="(1). Force",fg="blue", font=("Arial", 10))
     lbl_force.grid(row=0, column=0, padx=3, pady=3)
     ent_force = Entry(frm_main,font=("Arial", 10) )
@@ -131,7 +208,7 @@ def get_gui(frm_main):
     description.grid(row=7, column=2)
     description = Label(frm_main, text="(Stress, strain and linear thermal expansion) by using the values of both the ")
     description.grid(row=8, column=2)
-    description = Label(frm_main, text="area in meters and force in newton to calculate the stress in Newton per meter (N/m)")
+    description = Label(frm_main, text="area in meters and force in newton to calculate the stress in Newton per meter  (N/m²)")
     description.grid(row=9, column=2, padx=3, pady=3)
     description = Label(frm_main, text="material strain due to elongation or reduction in length")
     description.grid(row=10, column=2, padx=3, pady=3)
@@ -161,6 +238,31 @@ def get_gui(frm_main):
     button_clear.grid(row=9, column=0, columnspan=2, pady=5)
 
 def clear_field(ent_force, ent_area, ent_original, ent_final,ent_length, ent_alpha, ent_temp, ent_result):
+    """
+    Clear all input fields and reset the result display in the
+    Material Property Calculator.
+
+    This function removes any user-entered values from:
+    - Force entry
+    - Area entry
+    - Original and final length entries
+    - Thermal expansion coefficient entry
+    - Temperature change entry
+
+    It also clears the result label so the interface is ready
+    for a new calculation.
+
+    Parameters:
+        ent_force (Entry): Input field for applied force  
+        ent_area (Entry): Input field for cross-sectional area  
+        ent_original (Entry): Input field for original length  
+        ent_final (Entry): Input field for final length  
+        ent_length (Entry): Input field for length used in expansion  
+        ent_alpha (Entry): Input field for expansion coefficient  
+        ent_temp (Entry): Input field for temperature change  
+        ent_result (Label): Label used to display calculation results
+    """
+
     ent_force.delete(0, tk.END)
     ent_area.delete(0,tk.END)
     ent_original.delete(0,tk.END)
