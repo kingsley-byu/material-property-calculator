@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "toppasswords",
+        "wordlist"
+    ],
+    "python.testing.pytestArgs": [
+        "CSE111- CoursePROJECT"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
