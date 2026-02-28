@@ -33,7 +33,7 @@ def main():
                 product_price = float(product_info[PRODUCT_PRICE])
                 
                 # Print the product name, requested quantity, and product price.
-                print(f"{product_name}: {quantity} @ {product_price}")       
+                print(f"{product_name}: {quantity} @ ${product_price}")       
 
                 # Count the total item 
                 total_item_count += quantity
@@ -49,15 +49,15 @@ def main():
             # print an empty line
             print()
             #print the total item
-            print(f"The total item ordered: {total_item_count}")
+            print(f"The total item ordered: #{total_item_count}")
             # print the total price
-            print(f"The Subtotal: {total_due_price:.2f}")
+            print(f"The Subtotal: ${total_due_price:.2f}")
 
             # print the sales tax amount
-            print(f"The sales tax amount: {sales_tax_amount:.2f}")
+            print(f"The sales tax amount: ${sales_tax_amount:.2f}")
 
             # print the total amount due
-            print(f"Total: {total_amount_due:.2f}")
+            print(f"Total: ${total_amount_due:.2f}")
 
             # Print a thank you message 
             print("Thank you for your patronage🥰")

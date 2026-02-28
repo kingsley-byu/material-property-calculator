@@ -1,0 +1,9 @@
+Date        Task                                  Time (hours)
+------------------------------------------------------------
+Mon         Planned GUI layout & formulas          2.5
+Tue         Built tkinter interface                4.0
+Wed         Implemented calculations               3.0
+Thu         Writing test functions and debugging   2.0
+Sat        Writing docstrings & cleanup           2.0
+
+Total time: 13.5 hours
