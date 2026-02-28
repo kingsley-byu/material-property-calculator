@@ -194,13 +194,13 @@ def get_gui(frm_main):
     lbl_inst_on_stress_calculation = Label(frm_main, text="1. Enter the value of 1 and 2 to calculate the stress", fg="blue", font=("Arial", 10))
     lbl_inst_on_stress_calculation.grid(row=1, column=2, columnspan=2)
 
-    lbl_inst_on_stress_calculation = Label(frm_main, text="2. Enter the value of 3 and 4 to calculate the strain", fg="blue", font=("Arial", 10))
-    lbl_inst_on_stress_calculation.grid(row=2, column=2, columnspan=2)
+    lbl_inst_on_strain_calculation = Label(frm_main, text="2. Enter the value of 3 and 4 to calculate the strain", fg="blue", font=("Arial", 10))
+    lbl_inst_on_strain_calculation.grid(row=2, column=2, columnspan=2)
     
-    lbl_inst_on_stress_calculation = Label(frm_main, text="3. Enter the value of 5,6 and 7 to calculate the", fg="blue", font=("Arial", 10))
-    lbl_inst_on_stress_calculation.grid(row=3, column=2, columnspan=2)
-    lbl_inst_on_stress_calculation = Label(frm_main, text="linear thermal expansion of material", fg="blue", font=("Arial", 10))
-    lbl_inst_on_stress_calculation.grid(row=4, column=2, columnspan=2)
+    lbl_inst_on_thermal_exp_calculation = Label(frm_main, text="3. Enter the value of 5,6 and 7 to calculate the", fg="blue", font=("Arial", 10))
+    lbl_inst_on_thermal_exp_calculation.grid(row=3, column=2, columnspan=2)
+    lbl_inst_on_thermal_exp_calculation = Label(frm_main, text="linear thermal expansion of material", fg="blue", font=("Arial", 10))
+    lbl_inst_on_thermal_exp_calculation.grid(row=4, column=2, columnspan=2)
 
     cal_description_heading = Label(frm_main, text="DESCRIPTION", font=("Arial", 10) )
     cal_description_heading.grid(row=6, column=2)
@@ -208,7 +208,7 @@ def get_gui(frm_main):
     description.grid(row=7, column=2)
     description = Label(frm_main, text="(Stress, strain and linear thermal expansion) by using the values of both the ")
     description.grid(row=8, column=2)
-    description = Label(frm_main, text="area in meters and force in newton to calculate the stress in Newton per meter  (N/m²)")
+    description = Label(frm_main, text="area in meters and force in newton to calculate the stress in Newton per meter square (N/m²)")
     description.grid(row=9, column=2, padx=3, pady=3)
     description = Label(frm_main, text="material strain due to elongation or reduction in length")
     description.grid(row=10, column=2, padx=3, pady=3)
@@ -237,7 +237,7 @@ def get_gui(frm_main):
     button_clear = Button(frm_main, text="Clear", command=clear_button)
     button_clear.grid(row=9, column=0, columnspan=2, pady=5)
 
-def clear_field(ent_force, ent_area, ent_original, ent_final,ent_length, ent_alpha, ent_temp, ent_result):
+def clear_field(ent_force, ent_area, ent_original, ent_final,ent_length, ent_alpha, ent_temp, lbl_result):
     """
     Clear all input fields and reset the result display in the
     Material Property Calculator.
@@ -271,7 +271,7 @@ def clear_field(ent_force, ent_area, ent_original, ent_final,ent_length, ent_alp
     ent_temp.delete(0, tk.END)
     ent_length.delete(0, tk.END)
 
-    ent_result.config(text="")
+    lbl_result.config(text="")
 
 
 if __name__ == "__main__":
