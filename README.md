@@ -3,8 +3,8 @@
 A Python desktop application built with **Tkinter** that calculates
 three important material properties:
 
--   Stress\
--   Strain\
+-   Stress
+-   Strain
 -   Linear Thermal Expansion
 
 This project also includes automated unit testing using **pytest** to
@@ -20,7 +20,7 @@ verify calculation accuracy.
 
 Stress = Force / Area
 
--   Input: Force (N), Area (m²)\
+-   Input: Force (N), Area (m²)
 -   Output: Stress (N/m²)
 
 ------------------------------------------------------------------------
@@ -31,7 +31,7 @@ Stress = Force / Area
 
 Strain = (Final Length − Original Length) / Original Length
 
--   Input: Original Length (m), Final Length (m)\
+-   Input: Original Length (m), Final Length (m)
 -   Output: Strain (dimensionless)
 
 ------------------------------------------------------------------------
@@ -42,12 +42,12 @@ Strain = (Final Length − Original Length) / Original Length
 
 ΔL = αLΔT
 
-Where: - α = Coefficient of linear expansion\
-- L = Original length\
+Where: - α = Coefficient of linear expansion
+- L = Original length
 - ΔT = Temperature change
 
 -   Input: Length (m), Expansion coefficient (α), Temperature change
-    (°C)\
+    (°C)
 -   Output: Change in length (m)
 
 ------------------------------------------------------------------------
@@ -56,10 +56,10 @@ Where: - α = Coefficient of linear expansion\
 
 The program provides:
 
--   Clearly labeled input fields\
--   A **Calculate** button\
--   A **Clear** button\
--   Instructional guidance\
+-   Clearly labeled input fields
+-   A **Calculate** button
+-   A **Clear** button
+-   Instructional guidance
 -   A result display section
 
 The interface is built using Python's built-in `tkinter` library.
@@ -119,7 +119,7 @@ python GUI.py
 
 ## 📂 Project Structure
 
-    wdd131/
+    wdd131
     │
     ├── GUI.py
     ├── test_GUI.py
@@ -142,11 +142,11 @@ python GUI.py
 
 ## 🎯 Skills Demonstrated
 
--   Python function design\
--   GUI development with Tkinter\
--   Exception handling\
--   Unit testing with pytest\
--   Floating-point precision handling\
+-   Python function design
+-   GUI development with Tkinter
+-   Exception handling
+-   Unit testing with pytest
+-   Floating-point precision handling
 -   Code documentation\
 -   Basic software project structure
 
@@ -154,15 +154,15 @@ python GUI.py
 
 ## 🚀 Future Improvements
 
--   Add dropdown menu for material selection\
--   Add unit conversion (mm ↔ m, °C ↔ K)\
--   Improve GUI styling\
--   Add input validation feedback\
+-   Add dropdown menu for material selection
+-   Add unit conversion (mm ↔ m, °C ↔ K)
+-   Improve GUI styling
+-   Add input validation feedback
 -   Export results to a file
 
 ------------------------------------------------------------------------
 
 ## 👤 Author
 
-Kingsley\
+Kingsley osaruyi
 GitHub: kingsley-byu
