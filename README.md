@@ -119,7 +119,7 @@ python GUI.py
 
 ## 📂 Project Structure
 
-    wdd131
+    CSE111
     │
     ├── GUI.py
     ├── test_GUI.py
